@@ -32,8 +32,9 @@ void main(void) {
     T16C = 0;
 
     for (;;) {
-        // Pulse for about 3uS
+        // Pulse for about 4uS
         __set1io(PA, PULSE_PIN);
+        __nop();
         __nop();
         __nop();
         __set0io(PA, PULSE_PIN);
@@ -76,8 +77,9 @@ void main(void) {
         stt16 p
 
     loop:
-        // Pulse for about 3uS
+        // Pulse for about 4uS
         set1.io __pa, #PULSE_PIN
+        nop
         nop
         nop
         set0.io __pa, #PULSE_PIN
